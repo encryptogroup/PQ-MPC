@@ -1,0 +1,23 @@
+language: cpp
+compiler: g++
+dist: bionic
+
+before_install:
+  - sudo apt-get install -y libgmp-dev
+
+script:
+  # Build Library and Tests
+  - mkdir build
+  - cd build
+  - cmake -DBUILD_TESTS=ON ..
+  - make -j 4
+  # Run Tests
+  - cd bin
+  - ./pqot 1 8000 & ./pqot 2 8000
+  - ./pqyao 1 8000 & ./pqyao 2 8000
+  - ./bit 1 8000 & ./bit 2 8000
+  - ./int 1 8000 & ./int 2 8000
+  - ./float 1 8000 & ./float 2 8000
+
+notifications:
+  - email: false

@@ -1,0 +1,4 @@
+[submodule "extern/SEAL"]
+	path = extern/SEAL
+	url = https://github.com/Microsoft/SEAL
+	branch = 3.1.0

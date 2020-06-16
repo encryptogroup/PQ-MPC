@@ -26,3 +26,11 @@ Then run the test binaries in `build/bin/` as follows to make sure everything wo
 ```
 ./[test] 1 [port] & ./[test] 2 [port]
 ```
+
+## Acknowledgements
+
+The following directories contain code from external repositories:
+
+* `emp-tool`: This is a modified stripped-down version of [emp-tool](https://github.com/emp-toolkit/emp-tool/tree/master/emp-tool) with changes to support 256-bit labels and substitute `AES-128` with `AES-256`.
+* `pq-yao`: This is a modified version of [emp-sh2pc](https://github.com/emp-toolkit/emp-sh2pc/tree/master/emp-sh2pc) with changes for integration with PQ-OT and addition of support for PQ-Yao garbling.
+* `test`: This directory contains test files from [emp-sh2pc/test](https://github.com/emp-toolkit/emp-sh2pc/tree/master/test).

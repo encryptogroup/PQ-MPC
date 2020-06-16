@@ -5,6 +5,6 @@ add_library(pq-ot
 
 target_link_libraries(pq-ot
     PUBLIC
-    emp-tool
     SEAL::seal
+    emp-tool
 )

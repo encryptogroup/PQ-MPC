@@ -39,6 +39,7 @@ class Integer : public Swappable<Integer>, public Comparable<Integer> { public:
 	}
 
 	Integer(int length, const string& str, int party = PUBLIC);
+	Integer(int length, const bool * b, int party = PUBLIC);
 	Integer(int length, long long input, int party = PUBLIC);
 	Integer() :length(0),bits(nullptr){ }
 

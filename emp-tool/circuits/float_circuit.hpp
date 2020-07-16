@@ -49,7 +49,7 @@ inline Float Float::abs() const {
 
 inline void Float::normalize(int value_length, int to_add_to_expnt) {
    Integer value_before_normalize = value;
-   Integer bits_to_shift(value_before_normalize.size(), 0, PUBLIC);
+   Integer bits_to_shift(value_before_normalize.size(), (long long) 0, PUBLIC);
    for(int i = bits_to_shift.size()-1; i>0; --i)
       bits_to_shift[i] = value_before_normalize[i] ^ value_before_normalize[i-1];
    bits_to_shift[0] = true;
@@ -119,7 +119,7 @@ inline Integer divide_frac(const Integer& lhs, const Integer& rhs) {
    i1.resize(rhs.size()*2+1, false);
    i2.resize(rhs.size()*2+1, false);
    i1=i1<<rhs.size();
-   Integer res(2*rhs.size(), 0, 0);
+   Integer res(2*rhs.size(), (long long) 0, 0);
    for(int i = 0; i <= rhs.size(); ++i) {
 		Integer tmp = i1 >> (rhs.size()-i);
 //		tmp.resize(i1.size() - rhs.size() +i);

@@ -136,17 +136,17 @@ inline void init(Bit * bits, const bool* b, int length, int party) {
 	}
 }
 
-/*inline Integer::Integer(const bool * b, int length, int party) {
-  bits = new Bit[length];
-  init(bits,b,length, party);
-  }*/
-
 inline Integer::Integer(int len, const string& str, int party) : length(len) {
 	bool* b = new bool[len];
 	bool_data(b, len, str);
 	bits = new Bit[length];
 	init(bits,b,length, party);
 	delete[] b;
+}
+
+inline Integer::Integer(int len, const bool *b, int party) : length(len) {
+	bits = new Bit[length];
+	init(bits, b, length, party);
 }
 
 inline Integer::Integer(int len, long long input, int party)
@@ -371,7 +371,7 @@ inline Integer Integer::operator%(const Integer& rhs) const {
 }
 
 inline Integer Integer::operator-() const {
-	return Integer(size(), 0, PUBLIC)-(*this);
+	return Integer(size(), (long long) 0, PUBLIC)-(*this);
 }
 
 //Others
@@ -388,7 +388,7 @@ inline Integer Integer::leading_zeros() const {
 inline Integer Integer::hamming_weight() const {
 	vector<Integer> vec;
 	for(int i = 0; i < size(); i++) {
-		Integer tmp(2, 0, PUBLIC);
+		Integer tmp(2, (long long) 0, PUBLIC);
 		tmp[0] = bits[i];
 		vec.push_back(tmp);
 	}

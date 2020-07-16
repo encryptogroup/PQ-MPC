@@ -31,7 +31,7 @@ void test() {
 	auto time_start = clock_start();
 	Integer a(n_inputs * num_iter, 16807, ALICE);
 	Integer b(n_inputs * num_iter, 282475249, BOB);
-	Integer c(n_outputs * num_iter, 0, PUBLIC);
+	Integer c(n_outputs * num_iter, (long long) 0, PUBLIC);
     time_send_input = time_from(time_start);
     comm_send_input = io->get_total_comm() - comm_start;
 

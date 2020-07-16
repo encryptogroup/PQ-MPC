@@ -1,7 +1,7 @@
 # PQ-MPC
 
 This repository contains the code for the paper
-*"Secure Two-Party Computation in a Quantum World"*
+*"[Secure Two-Party Computation in a Quantum World](https://eprint.iacr.org/2020/411)"*
 by Niklas Büscher, Daniel Demmler, Nikolaos P. Karvelas, Stefan Katzenbeisser, Juliane Krämer, Deevashwer Rathee, Thomas Schneider, and Patrick Struck, which will appear at [ACNS'20](https://sites.google.com/di.uniroma1.it/ACNS2020).
 
 ## Required packages:
@@ -24,7 +24,7 @@ To compile the tests, run `cmake -DBUILD_TESTS=ON .. && make` in `build/`.
 Then run the test binaries in `build/bin/` as follows to make sure everything works as intended:
 
 ```
-./[test] 1 [port] & ./[test] 2 [port]
+./<test> 1 <port> [circuit] [iterations] & ./<test> 2 <port> [circuit] [iterations]
 ```
 
 ## Acknowledgements

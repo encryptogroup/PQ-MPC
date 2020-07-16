@@ -7,7 +7,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 option(BUILD_TESTS "Build tests" OFF)
 message(STATUS "Option: BUILD_TESTS = ${BUILD_TESTS}")
 
-add_compile_options("-pthread;-Wall;-march=native;-maes;-mrdseed;-std=c++14;-O3")
+add_compile_options("-pthread;-Wall;-march=native;-maes;-mrdseed;-std=c++14")
 
 find_package(GMP REQUIRED)
 
